@@ -1,8 +1,17 @@
-## GENTOOBER ALIASES - Sun Oct 29 08:41:21 AM -03 2023
+#  
+#       __            __          ___                
+#      / /  ___ ____ / /    ___ _/ (_)__ ____ ___ ___
+#   _ / _ \/ _ `(_-</ _ \  / _ `/ / / _ `(_-</ -_|_-<
+#  (_)_.__/\_,_/___/_//_/  \_,_/_/_/\_,_/___/\__/___/
+#                                                    
+#------------------------------------------------------
+#                   by gentoober (2023)
+#------------------------------------------------------
 
 # commands
 alias g='grep'
 alias ls='lsd'
+alias sx='sxiv'
 alias rm='rm -v'
 alias mv='mv -v'
 alias cp='cp -v'
@@ -28,10 +37,10 @@ alias cd-dmenu='cd ~/.config/suckless/dmenu'
 alias cdst='cd ~/.config/suckless/st-gentoober'
 alias cd-dwmblocks='cd ~/.config/suckless/dwmblocks'
 # hyprland
-alias cdh='cd ~/.config/hypr'
-alias cdg='cd ~/.gscripts'
-alias cdw='cd /home/gentoober/.config/hypr/waybar'
-alias cddw='cd /home/gentoober/.config/hypr/dwmbar'
+alias dot='cd ~/.config/hypr'
+alias dots='cd ~/.gscripts'
+alias cdot='cd /home/gentoober/.config/hypr/waybar'
+alias cddot='cd /home/gentoober/.config/hypr/dwmbar'
 
 # startx
 #alias x='startx'
@@ -39,23 +48,40 @@ alias x='Hyprland'
 alias audacious='audacious > /dev/null 2>&1'
 
 # xt custom
-alias openpdf='evince'
 alias tda='todo -a'
 alias tdg='todo -g'
 alias tdr='todo -r'
-alias portop='htop -u portage'
+alias eda='micro ~/.bash_aliases'
 alias getip='curl ipinfo.io | jq'
+alias portop='htop -u portage'
+alias openpdf='evince'
 #alias scs='grimblast copy area --cursor'
 alias scs='grim -g "$(slurp)" - | wl-copy -t image/jpg'
 alias ccat='highlight --out-format=ansi'
-alias edit-aliases='micro ~/.bash_aliases'
 alias playm='mpv --no-video --shuffle=yes *.mp3'
-alias git-push='pass show dev/gentoober-github-ssh -c && git push'
-alias git-clone='pass show dev/gentoober-github-ssh -c && git clone'
 alias surf='surf -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://www.google.com'
 alias imgsize="identify -format \"%w %h %i\\n\" *.jpg | awk '\$1 == 1920 && \$2 == 1080'"
+
+# nix
 alias nix-env-upgrade='nix-channel --update -vvv && nix-env --upgrade -vvv && nix-collect-garbage -d && nix-store --optimise -vvv'
+
+alias notes='micro ~/notes.txt'
+alias nf='neofetch'
+alias pf='ufetch'
+
+alias gs="git status"
+alias ga="git add"
+alias gpl="git pull"
+alias gst="git stash"
+alias gsp="git stash; git pull"
+alias gcheck="git checkout"
+alias gitcm="git commit -m"
+alias gp='pass show dev/gentoober-github-ssh -c && git push'
+alias git-clone='pass show dev/gentoober-github-ssh -c && git clone'
 
 # privileged
 alias glc='doas genlop -c'
 alias glt='doas genlop -t'
+alias git-initcommit='pass show -c dev/gentoober-github-ssh && git push --set-upstream origin'
+
+

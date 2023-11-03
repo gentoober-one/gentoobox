@@ -1,0 +1,40 @@
+#        __             _ __  __      
+#  ___ _/ /__ _________(_) /_/ /___ __
+# / _ `/ / _ `/ __/ __/ / __/ __/ // /
+# \_,_/_/\_,_/\__/_/ /_/\__/\__/\_, / 
+#                              /___/  
+#
+#---------------------------------------
+#         by gentoober (2023)                              
+#---------------------------------------
+
+import:
+  - ~/.config/alacritty/colorschemes/vscode_dark_modern.yml
+
+dynamic_padding: true
+
+decorations: full
+
+title: Alacritty
+dynamic_title: true
+
+builtin_box_drawing: true
+
+cursor:
+  style:
+    shape: Underline
+    blinking: Always
+    
+live_config_reload: true
+
+font:
+  normal:
+    family: "Literation Mono NerdFont Propo"
+    style: bold
+  size: 11.5
+colors:
+  primary:
+    background: '0x000000'
+
+window:
+    opacity: 0.8

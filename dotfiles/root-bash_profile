@@ -1,7 +1,14 @@
-# /etc/skel/.bash_profile
+#      __            __                   ____ __   
+#     / /  ___ ____ / /    ___  _______  / _(_) /__ 
+#  _ / _ \/ _ `(_-</ _ \  / _ \/ __/ _ \/ _/ / / -_)
+# (_)_.__/\_,_/___/_//_/ / .__/_/  \___/_//_/_/\__/ 
+#                       /_/                         
+#
+#-----------------------------------------------------
+#               by gentoober (2023)
+#-----------------------------------------------------
+# original at /etc/skel/.bash_profile
 
-# This file is sourced by bash for login shells.  The following line
-# runs your .bashrc and is recommended by the bash info pages.
 if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi
