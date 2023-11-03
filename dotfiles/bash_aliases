@@ -1,0 +1,61 @@
+## GENTOOBER ALIASES - Sun Oct 29 08:41:21 AM -03 2023
+
+# commands
+alias g='grep'
+alias ls='lsd'
+alias rm='rm -v'
+alias mv='mv -v'
+alias cp='cp -v'
+alias h='history'
+alias df='df -hT'
+alias cls='clear'
+alias l='lsd -lhF'
+alias sleep='delay'
+alias ll='lsd -lhaF'
+alias free='free -h'
+alias rmd='rmdir -v'
+alias mkd='mkdir -p -v'
+alias tree='lsd --tree'
+alias lfs='lfs --units binary'
+alias grep='grep --color=auto'
+alias diff='diff -u --color=auto'
+
+# suckless / hyprland dirs
+# suckless
+alias suck='cd ~/.config/suckless'
+alias cdwm='cd ~/.config/suckless/dwm'
+alias cd-dmenu='cd ~/.config/suckless/dmenu'
+alias cdst='cd ~/.config/suckless/st-gentoober'
+alias cd-dwmblocks='cd ~/.config/suckless/dwmblocks'
+# hyprland
+alias cdh='cd ~/.config/hypr'
+alias cdg='cd ~/.gscripts'
+alias cdw='cd /home/gentoober/.config/hypr/waybar'
+alias cddw='cd /home/gentoober/.config/hypr/dwmbar'
+
+# startx
+#alias x='startx'
+alias x='Hyprland'
+alias audacious='audacious > /dev/null 2>&1'
+
+# xt custom
+alias openpdf='evince'
+alias tda='todo -a'
+alias tdg='todo -g'
+alias tdr='todo -r'
+alias portop='htop -u portage'
+alias getip='curl ipinfo.io | jq'
+#alias scs='grimblast copy area --cursor'
+alias scs='grim -g "$(slurp)" - | wl-copy -t image/jpg'
+alias ccat='highlight --out-format=ansi'
+alias edit-aliases='micro ~/.bash_aliases'
+alias playm='mpv --no-video --shuffle=yes *.mp3'
+alias git-push='pass show dev/gentoober-github-ssh -c && git push'
+alias git-clone='pass show dev/gentoober-github-ssh -c && git clone'
+alias surf='surf -u "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" https://www.google.com'
+alias imgsize="identify -format \"%w %h %i\\n\" *.jpg | awk '\$1 == 1920 && \$2 == 1080'"
+alias nix-env-upgrade='nix-channel --update -vvv && nix-env --upgrade -vvv && nix-collect-garbage -d && nix-store --optimise -vvv'
+
+# privileged
+alias glc='doas genlop -c'
+alias glt='doas genlop -t'

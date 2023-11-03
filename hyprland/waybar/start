@@ -1,0 +1,4 @@
+#!/bin/bash
+
+waybar -c ~/.config/hypr/waybar/config -s ~/.config/hypr/waybar/style.css > /dev/null 2>&1 &
+exit 0

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+export HOUR=$(date +'%H%M')
+export BASE_HOUR="1800"
+
+echo $HOUR
+
+if ! pgrep -x "gammastep" > /dev/null; then
+    if ((HOUR >= BASE_HOUR)); then
+        gammastep -O 4600 &
+    else
+        pkill gammastep; gammastep -O 4600 &
+    fi
+else
+    exit 0
+fi

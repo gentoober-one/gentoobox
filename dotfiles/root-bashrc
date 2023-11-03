@@ -1,0 +1,28 @@
+## ORIGINAL -> /etc/skel/.bashrc
+#
+## GENTOOBER's !!! ROOT !!! BASHRC - Sun Oct 29 08:49:55 AM -03 2023
+
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+if [ "$EUID" -eq 0 ]; then
+    PS1="\[\033[01;31m\]\h \[\033[01;34m\]\w #\[\033[00m\] "
+else
+    PS1="\[\033[01;34m\]\h \[\033[01;34m\]\w $\[\033[00m\] "
+fi
+
+if [[ -f ~/.bash_aliases ]]; then
+      . ~/.bash_aliases
+fi
+
+# STARSHIP
+#eval "$(starship init bash)"
+
+# autocd
+shopt -s autocd
+
+# $DATE
+export DATE="$(date +'%d.%m.%Y')"
+#export HOSTNAME="$(cat /etc/hostname)"
