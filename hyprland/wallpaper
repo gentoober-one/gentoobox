@@ -1,0 +1,20 @@
+#!/bin/bash
+
+## initialize wallpaper daemon
+if ! pgrep -x "swww-daemon" > /dev/null; then
+        swww init &
+  else
+        pkill swww; swww init &
+fi
+
+sleep 1;
+
+## set wallpaper
+# LAIN
+swww img ~/images/wallpapers/lain/956383.jpg
+# HANNYA:
+#swww img ~/images/wallpapers/1920x1080-867025-Video-Game-Onmyoji-1080P.jpg
+# HOTARU_SHIDARE
+#swww img ~/images/wallpapers/hotaru_shidare.jpg
+
+exit 0

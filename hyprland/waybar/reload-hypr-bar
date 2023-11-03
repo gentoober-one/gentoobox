@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if ! pgrep -x "waybar" > /dev/null; then
+	~/.config/hypr/waybar/start &
+  else
+  	pkill waybar; ~/.config/hypr/waybar/start &
+fi
+
+exit 0

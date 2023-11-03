@@ -1,0 +1,55 @@
+## original -> /etc/skel/.bashrc
+## GENTOOBER'S BASHRC - Sun Oct 29 08:41:21 AM -03 2023
+
+if [[ $- != *i* ]] ; then
+	# Shell is non-interactive.  Be done now!
+	return
+fi
+
+if [[ -f ~/.bash_aliases ]]; then
+    . ~/.bash_aliases
+fi
+
+if [ -z "${WAYLAND_DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    dbus-run-session Hyprland
+fi
+
+# XTERM:
+
+xrdb -merge ~/.Xresources
+
+# STARSHIP
+export STARSHIP_CONFIG=~/.config/starship.toml
+eval "$(starship init bash)"
+
+# DOAS AUTOCOMPLETE:
+complete -fc doas
+
+# AUTOCD:
+shopt -s autocd
+
+# VARIABLES:
+export EDITOR="micro"
+export DATE="$(date +'%d.%m.%Y')"
+
+# PATH EDITIONS:
+source $HOME/.ipfs-completion.bash
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/bash-completion/completions/fzf
+#export PATH=$PATH:'/home/gentoober/.cargo/bin'
+export PATH=$PATH:'/home/gentoober/.nix-profile/bin'
+
+# XDG ENVVARS:
+export XDG_TEMPLATES_DIR=/dev/null
+export XDG_PUBLICSHARE_DIR=/dev/null
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+export XDG_DESKTOP_DIR=/home/gentoober/
+export XDG_MUSIC_DIR=/home/gentoober/music/
+export XDG_VIDEOS_DIR=/home/gentoober/videos/
+export XDG_PICTURES_DIR=/home/gentoober/images/
+export XDG_DOWNLOAD_DIR=/home/gentoober/downloads/
+export XDG_DOCUMENTS_DIR=/home/gentoober/documents/
+#export XDG_CACHE_HOME="/tmp/${LOGNAME}/.cache"
+
+# FLATPAK:
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:/home/gentoober/.local/share/flatpak/exports/share"

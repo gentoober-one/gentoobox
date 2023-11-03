@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if ! pgrep -x "swww-daemon" > /dev/null; then
+        ~/.config/hypr/wallpaper &
+  else
+        pkill swww; ~/.config/hypr/wallpaper &
+fi
+
+exit 0
